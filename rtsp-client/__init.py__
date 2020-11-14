@@ -1,0 +1,7 @@
+# -*- coding: utf-8 -*-
+
+"""Top-level package for rtsp-client."""
+
+__author__ = """Mark LaCore"""
+__email__ = 'mark@nerdymark.com'
+__version__ = '1.0.0'
