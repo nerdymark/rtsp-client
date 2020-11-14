@@ -26,7 +26,7 @@ while True:
             previewEnd = t.time() + previewLength
             while t.time() < previewEnd:
                 try:
-                    print('Trying ' + url _ ' until ' + previewEnd)
+                    print('Trying ' + url + ' until ' + previewEnd)
                     client.preview()
                 except Exception as e:
                     print(e)
