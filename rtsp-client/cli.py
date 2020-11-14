@@ -23,10 +23,10 @@ cameraList = [
 while True:
     for url in cameraList:
         with rtsp.Client(url) as client:
-            print('Trying ' + url)
             previewEnd = t.time() + previewLength
             while t.time() < previewEnd:
                 try:
+                    print('Trying ' + url _ ' until ' + previewEnd)
                     client.preview()
                 except Exception as e:
                     print(e)
