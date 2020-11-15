@@ -36,4 +36,5 @@ while True:
             print('function terminated')
             p.terminate()
             p.join()
-            client.close()
+            with rtsp.Client(url) as client:
+                client.close()
