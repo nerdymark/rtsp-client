@@ -23,11 +23,12 @@ cameraList = [
 
 while True:
     for url in cameraList:
-        try:
-            with rtsp.Client(url) as client:
-                with timeout(15, exception=RuntimeError):
-                    client.preview()
-                    pass
-        except RuntimeError:
-            client.close()
-            pass
+        while True:
+            try:
+                with rtsp.Client(url) as client:
+                    with timeout(15, exception=RuntimeError):
+                        client.preview()
+                        pass
+            except RuntimeError:
+                client.close()
+                pass
