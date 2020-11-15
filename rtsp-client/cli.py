@@ -11,6 +11,7 @@ from interruptingcow import timeout
 
 rtspUser = os.environ['RTSP_USER']
 rtspPass = os.environ['RTSP_PASS']
+os.environ['DISPLAY'] = ":0"
 
 cameraList = [
     'rtsp://'+rtspUser+':'+rtspPass+'@10.0.1.150:554/ch01/1',
