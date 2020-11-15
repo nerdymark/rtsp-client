@@ -32,7 +32,7 @@ while True:
         p = multiprocessing.Process(target=showStream(url), name="Stream")
         p.start()
         p.join(timeout)
-        if p.is_alive()
+        if p.is_alive():
             print('function terminated')
             p.terminate()
             p.join()
