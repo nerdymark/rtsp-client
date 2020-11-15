@@ -5,7 +5,7 @@ import logging
 import os
 import sys
 import rtsp
-import time as t
+import time
 
 rtspUser = os.environ['RTSP_USER']
 rtspPass = os.environ['RTSP_PASS']
@@ -39,7 +39,5 @@ while True:
     for url in cameraList:
         for sec in previewLength(15):
             with rtsp.Client(url) as client:
-                previewEnd = t.time() + previewLength
-                print('Trying ' + url + ' from ' + str(t.time()) + ' until ' + str(previewEnd))
                 client.preview()
             client.close()
