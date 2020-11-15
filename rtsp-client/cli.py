@@ -25,12 +25,8 @@ while True:
         with rtsp.Client(url) as client:
             previewEnd = t.time() + previewLength
             while True:
-                try:
-                    print('Trying ' + url + ' from ' + str(t.time()) + ' until ' + str(previewEnd))
-                    client.preview()
-                except Exception as e:
-                    print(e)
-                    pass
+                print('Trying ' + url + ' from ' + str(t.time()) + ' until ' + str(previewEnd))
+                client.preview()
                 if t.time() < previewEnd:
-                    break
                     client.close()
+                    break
