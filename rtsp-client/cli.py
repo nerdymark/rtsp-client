@@ -27,6 +27,7 @@ while True:
             with rtsp.Client(url) as client:
                 with timeout(15, exception=RuntimeError):
                     client.preview()
+                    pass
         except RuntimeError:
             client.close()
             pass
